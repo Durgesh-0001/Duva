@@ -94,6 +94,8 @@ export const useAuthStore = create((set, get) => ({
       query: {
         userId: authUser._id,
       },
+      withCredentials: true, // ✅ Required for cookies to be sent
+      transports: ["websocket"],
     });
     socket.connect();
 
