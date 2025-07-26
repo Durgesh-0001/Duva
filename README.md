@@ -1,12 +1,86 @@
-# React + Vite
+# DuVa Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern chat application frontend built with [React](https://react.dev/), [Vite](https://vitejs.dev/), [Zustand](https://zustand-demo.pmnd.rs/), [Socket.io](https://socket.io/), [Tailwind CSS](https://tailwindcss.com/), and [DaisyUI](https://daisyui.com/).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (Sign up, Login, Logout)
+- Real-time messaging with Socket.io
+- Profile management (update avatar)
+- Theme selection (30+ DaisyUI themes)
+- Responsive UI with Tailwind CSS & DaisyUI
+- Sidebar with online/offline contacts
+- Image attachments in chat
+- Skeleton loaders for smooth UX
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+```sh
+git clone https://github.com/your-username/duva.git
+cd duva/Frontend
+npm install
+```
+
+### Running Locally
+
+```sh
+npm run dev
+```
+
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+### Building for Production
+
+```sh
+npm run build
+```
+
+### Linting
+
+```sh
+npm run lint
+```
+
+## Project Structure
+
+```
+Frontend/
+  ├── public/           # Static assets
+  ├── src/
+  │   ├── components/   # Reusable UI components
+  │   ├── constants/    # Theme constants
+  │   ├── lib/          # Utility libraries (axios, helpers)
+  │   ├── pages/        # Route pages (Home, Login, Signup, etc.)
+  │   ├── store/        # Zustand stores (auth, chat, theme)
+  │   ├── assets/       # Images and icons
+  │   ├── index.css     # Tailwind base styles
+  │   └── App.jsx       # Main app component
+  ├── package.json
+  ├── tailwind.config.js
+  ├── vite.config.js
+  └── README.md
+```
+
+## Environment Variables
+
+- The frontend expects the backend API at `http://localhost:8000/api` in development.
+- Update `src/lib/axios.js` if your backend runs elsewhere.
+
+## Dependencies
+
+- React, React Router, Zustand, Socket.io-client, Axios, Lucide-react, DaisyUI, Tailwind CSS, React Hot Toast
+
+## License
+
+MIT
+
+---
+
+> **Note:** This is only the frontend. For full functionality, clone and run
